@@ -1,0 +1,20 @@
+---samba----
+apt-get install samba
+/etc/samba/smb.conf
+[luopu]
+comment = hello
+path = /home/luopu
+security = SHARE
+writable = yes
+smbpasswd -a luopu
+
+---ubuntu16修改网卡----
+/etc/default/grub
+GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
+grub-mkconfig -o /boot/grub/grub.cfg
+reboot
+
+-----文件系统------
+/etc/ftab
+mount -t vboxsf share share
+mount -t tmpfs tmpfs tmp
