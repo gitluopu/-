@@ -1,0 +1,2 @@
+apt-get install mysql-server mysql-client
+apt-get install apache2
